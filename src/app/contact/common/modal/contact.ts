@@ -3,15 +3,9 @@ export class Contact {
   name: string;
   title: string;
   phone: string;
-  email: string;
-  linkedIn: string;
-  skype: string;
-  tag: [
-    {
-      id: number;
-      name: string;
-      status: true;
-    }
-    ];
+  email?: string;
+  linkedIn?: string;
+  skype?: string;
+  tag: any;
 }
 

@@ -14,7 +14,7 @@
           <a (click)="changStatus(tag)">
             {{tag.status ? '[x]' : '[ ]'}} {{tag.name}}
           </a>
-          <div class="tag-edit" ><a (click)="editTag($event, tag)">Edit</a> / <a (click)="deleteTag($event)">Delete</a></div>
+          <div class="tag-edit" ><a (click)="editTag($event, tag)">Edit</a> / <a (click)="deleteTag(tag)">Delete</a></div>
         </div>
         <input [(ngModel)]="selectedTag.name" (keypress)="addTag($event);" placeholder="Add Tag and press Enter"
                class="input-tag">

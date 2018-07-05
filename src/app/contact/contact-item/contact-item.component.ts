@@ -8,11 +8,11 @@ import {ContactTag} from '../common/modal/contactTag';
   styleUrls: ['./contact-item.component.css']
 })
 export class ContactItemComponent implements OnInit {
-  @Input() contacts$: Contact[];
-  @Input() selected$: ContactTag[];
-  contacts: Contact[];
+  @Input() contacts$: Contact;
+  @Input() selected$: ContactTag;
+  contacts: Contact;
   isClick: Boolean = false;
-  selectedTag: ContactTag[];
+  selectedTag: ContactTag;
 
   constructor() {
   }
@@ -54,16 +54,16 @@ export class ContactItemComponent implements OnInit {
       const tag = {id, status, name};
       // console.log(item);
       this.contacts.tag.push(tag);
-      this.selectedTag = [];
-    } else {
-      this.selectedTag = [];
+      this.selectedTag = {id: 0, name: ''};
+    } else if ($event.keyCode === 13) {
+      this.selectedTag = {id: 0, name: ''};
     }
   }
 
   editTag($event, item) {
     this.selectedTag = item;
     if ($event.keyCode === 13) {
-      this.selectedTag = [];
+      this.selectedTag = {id: 0, name: ''};
     }
   }
 
