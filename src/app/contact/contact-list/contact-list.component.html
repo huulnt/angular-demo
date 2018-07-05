@@ -1,4 +1,23 @@
-<p>
-  contact-list works!
-</p>
-<app-contact-item></app-contact-item>
+<h1>Contact list</h1>
+
+<div class="contact-list">
+  <div class="contact-item" *ngFor="let contact of contacts" (click)="selectContact(contact)"
+       routerLink="/contact/{{contact.id}}">
+    <app-contact-item [contacts$]="contact" [selected$]="selectedContact"></app-contact-item>
+  </div>
+</div>
+<div class="contact-detail" *ngIf="selectedContact">
+  <p class="detail-name">{{selectedContact.name}}</p>
+  <div>
+    <label>Phone:</label> <span>{{selectedContact.phone}}</span>
+  </div>
+  <div>
+    <label>Email:</label> <span>{{selectedContact.email}}</span>
+  </div>
+  <div>
+    <label>LinkedIn: </label> <span>{{selectedContact.linkedIn}}</span>
+  </div>
+  <div>
+    <label>Skype: </label> <span>{{selectedContact.skype}}</span>
+  </div>
+</div>

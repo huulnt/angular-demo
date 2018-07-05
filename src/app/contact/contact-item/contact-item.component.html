@@ -1,4 +1,24 @@
 <div class="contact-item">
-    <p class="contact-name"></p>
-    <p class="contact-title"></p>
+  <p class="contact-name">{{contacts.name}}</p>
+  <p class="contact-title">{{contacts.title}}</p>
+  <div class="tag">
+      <button *ngFor="let tag of contacts.tag" type="button" [hidden]="!tag.status" class="tag-item">{{tag.name}}</button>
+  </div>
+  <div class="tagv-btn">
+    <button (click)="!showTagPopUp();">
+      TAGS V
+    </button>
+    <div class="tag-popup" *ngIf="isClick" >
+      <div class="contact-tag">
+        <div *ngFor="let tag of contacts.tag">
+          <a (click)="changStatus(tag)">
+            {{tag.status ? '[x]' : '[ ]'}} {{tag.name}}
+          </a>
+          <div class="tag-edit" ><a (click)="editTag($event, tag)">Edit</a> / <a (click)="deleteTag($event)">Delete</a></div>
+        </div>
+        <input [(ngModel)]="selectedTag.name" (keypress)="addTag($event);" placeholder="Add Tag and press Enter"
+               class="input-tag">
+      </div>
+    </div>
+  </div>
 </div>

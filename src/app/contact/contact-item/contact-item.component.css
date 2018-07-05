@@ -1,0 +1,81 @@
+.tag-item {
+  margin-right:10px;
+  margin-top:10px;
+}
+.contact-name {
+  font-weight: bold;
+}
+.contact-item {
+  padding:20px;
+  display: block;
+  border-bottom:1px solid gray;
+  position: relative;
+}
+
+.contact-item a {
+  text-decoration: none;
+}
+
+
+.contact-item:nth-child(odd) {
+  background-color:#f4f4f5;
+}
+
+.tagv-btn {
+  position: absolute;
+  top:25%;
+  right:5%;
+  cursor: pointer;
+}
+.tagv-btn button {
+  background-color:#dcecf1;
+  cursor: pointer;
+}
+.contact-item-selected {
+  background-color:#cbd6d8 !important;
+  border: 1px solid gray;
+}
+.contact-list {
+  float:left;
+  width: 69%;
+
+  position: relative;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+}
+.contact-tag {
+  background-color:#c7e9f1;
+  padding:20px;
+  border-radius: 1px;
+  width: 400px;
+  position: absolute;
+  z-index: 100;
+}
+.contact-tag a:hover {
+  font-weight: bold;
+  font-style: italic;
+}
+.tag-edit {
+  float:right;
+}
+.tag-edit a {
+  font-size: 12px;
+  font-weight: bold;
+}
+.input-tag {
+  padding: 8px;
+  margin-top: 5px;
+  width: 100%;
+  border-radius: 6px;
+  background-color: #f5f4f4;
+}
+.error_msg {
+  color:red;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: bold;
+}
+

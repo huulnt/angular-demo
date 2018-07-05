@@ -1,27 +1,19 @@
 import {RouterModule, Routes} from '@angular/router';
+import {ContactListComponent} from './contact/contact-list/contact-list.component';
 import {NgModule} from '@angular/core';
 
-const appRoutes: Routes = [
-  {
-    path: 'contact',
-    loadChildren: 'app/contact/contact.module#ContactModule',
-  }
-]
-@NgModule({
-  imports: [
-    RouterModule.forRoot(
-      appRoutes,
-      {
-        enableTracing: true
+const routes: Routes = [
+  {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+  {path: 'dashboard', component: ContactListComponent},
+  {path: 'contact/:id', component: ContactListComponent},
+  {path: 'contact', component: ContactListComponent}
+];
 
-      }
-    )
-  ],
-  exports: [
-    RouterModule
-  ],
-  providers: [
-  ]
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
+
 
