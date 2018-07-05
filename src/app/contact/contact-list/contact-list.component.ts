@@ -9,7 +9,7 @@ import {ContactService} from '../../contact.serivce';
 })
 export class ContactListComponent implements OnInit {
   contacts: Contact[];
-  selectedContact: Contact[];
+  selectedContact: Contact;
 
   constructor(private contact: ContactService) {
   }
