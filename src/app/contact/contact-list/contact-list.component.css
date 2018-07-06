@@ -11,15 +11,6 @@ label {
   font-size: 40px;
 }
 
-.contact-detail {
-  width:30%;
-  padding:20px;
-  float:right;
-  background-color:#f4f4f5;
-  position: fixed;
-  float: right;
-  right: 0px;
-}
 .contact-list {
   float:left;
   width: 65%;

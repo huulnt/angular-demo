@@ -1,32 +1,37 @@
-<h1>Contact list</h1>
+<div class="container">
+  <h1>Contact list</h1>
+  <div class="row">
+    <div class="col-sm-8">
+      <input #searchBox style="margin-bottom: 20px" class="form-control form-control-lg"
+             (keyup)="search($event, searchBox.value)"
+             placeholder="Search by Name, Company or #Tag"
+      />
+      <div class="contact-item" *ngFor="let contact of contacts" (click)="selectContact(contact)"
+           routerLink="/contact/{{contact.id}}">
+        <app-contact-item [contacts$]="contact" [selected$]="selectedContact"></app-contact-item>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="contact-detail" *ngIf="selectedContact">
+        <p class="detail-name">{{selectedContact.name}}</p>
+        <div>
+          <label>Phone:</label> <span>{{selectedContact.phone}}</span>
+        </div>
+        <div>
+          <label>Email:</label> <span>{{selectedContact.email}}</span>
+        </div>
+        <div>
+          <label>Company:</label> <span>{{selectedContact.copmpany}}</span>
+        </div>
+        <div>
+          <label>LinkedIn: </label> <span>{{selectedContact.linkedIn}}</span>
+        </div>
+        <div>
+          <label>Skype: </label> <span>{{selectedContact.skype}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="contact-list">
-  <div class="search-container">
-    <input #searchBox id="search-box" class="search-box"
-           (keyup)="search($event, searchBox.value)"
-           placeholder="Search by Name, Company or #Tag"
-    />
-  </div>
-  <div class="contact-item" *ngFor="let contact of contacts" (click)="selectContact(contact)"
-       routerLink="/contact/{{contact.id}}">
-    <app-contact-item [contacts$]="contact" [selected$]="selectedContact"></app-contact-item>
-  </div>
-</div>
-<div class="contact-detail" *ngIf="selectedContact">
-  <p class="detail-name">{{selectedContact.name}}</p>
-  <div>
-    <label>Phone:</label> <span>{{selectedContact.phone}}</span>
-  </div>
-  <div>
-    <label>Email:</label> <span>{{selectedContact.email}}</span>
-  </div>
-  <div>
-    <label>Company:</label> <span>{{selectedContact.copmpany}}</span>
-  </div>
-  <div>
-    <label>LinkedIn: </label> <span>{{selectedContact.linkedIn}}</span>
-  </div>
-  <div>
-    <label>Skype: </label> <span>{{selectedContact.skype}}</span>
-  </div>
-</div>
+
