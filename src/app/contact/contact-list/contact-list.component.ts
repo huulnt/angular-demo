@@ -26,4 +26,15 @@ export class ContactListComponent implements OnInit {
     this.contact.getContacts()
       .subscribe(contact => this.contacts = contact);
   }
+
+  search($event, value) {
+    if ($event.keyCode === 13 && value === '') {
+      this.getContacts();
+    } else if ($event.keyCode === 13) {
+      const result = this.contacts.filter(function (v, i) {
+        return v.name === value || v.copmpany === value;
+      });
+      this.contacts = result;
+    }
+  }
 }

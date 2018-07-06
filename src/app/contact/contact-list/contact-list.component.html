@@ -1,6 +1,12 @@
 <h1>Contact list</h1>
 
 <div class="contact-list">
+  <div class="search-container">
+    <input #searchBox id="search-box" class="search-box"
+           (keyup)="search($event, searchBox.value)"
+           placeholder="Search by Name, Company or #Tag"
+    />
+  </div>
   <div class="contact-item" *ngFor="let contact of contacts" (click)="selectContact(contact)"
        routerLink="/contact/{{contact.id}}">
     <app-contact-item [contacts$]="contact" [selected$]="selectedContact"></app-contact-item>
@@ -13,6 +19,9 @@
   </div>
   <div>
     <label>Email:</label> <span>{{selectedContact.email}}</span>
+  </div>
+  <div>
+    <label>Company:</label> <span>{{selectedContact.copmpany}}</span>
   </div>
   <div>
     <label>LinkedIn: </label> <span>{{selectedContact.linkedIn}}</span>

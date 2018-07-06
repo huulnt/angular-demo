@@ -3,8 +3,9 @@ import {Contact} from './contact/common/modal/contact';
 export const CONTACT: Contact[] = [
   {
     id: 1,
-    name: 'Trọng Hữu',
+    name: 'Trong Huu',
     title: 'Huu le',
+    copmpany: 'fpt',
     phone: '01646938528',
     email: 'huulnt@gmail.com',
     linkedIn: 'huulnt',
@@ -13,11 +14,6 @@ export const CONTACT: Contact[] = [
       {
         id: 1,
         name: 'Conultant',
-        status: true
-      },
-      {
-        id: 2,
-        name: 'Mentor',
         status: true
       },
       {
@@ -35,8 +31,9 @@ export const CONTACT: Contact[] = [
   {
     id: 2,
     name: 'Duy Tran Thanh',
-    title: 'le huu',
-    phone: '01659498090',
+    title: 'tran thanh',
+    phone: '',
+    copmpany: 'google',
     email: 'duytt2@gmail.com',
     linkedIn: 'duytt2',
     skype: 'duytt2@outlook.com.vn',
@@ -65,9 +62,10 @@ export const CONTACT: Contact[] = [
   },
   {
     id: 3,
-    name: 'Trọng Hữu',
+    name: 'huu trong',
     title: 'Trong Huu',
     phone: '+841616938528',
+    copmpany: 'facebook',
     email: 'huulnt@gmail.com',
     linkedIn: 'huulnt',
     skype: 'huulnt@outlook.com.vn',
