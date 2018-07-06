@@ -10,12 +10,12 @@
         </button>
       </div>
       <div class="col-sm-4 d-flex justify-content-end">
-        <button cl (click)="!showTagPopUp();">
+        <button  (click)="!showTagPopUp();">
           TAGS V
         </button>
 
-        <div class="tag-popup" *ngIf="isClick">
-          <div class="contact-tag">
+        <div class="tag-popup " *ngIf="isClick">
+          <div class="contact-tag bg-light">
             <div *ngFor="let tag of contacts.tag">
               <a (click)="changStatus(tag)">
                 {{tag.status ? '[x]' : '[ ]'}} {{tag.name}}
