@@ -3,7 +3,7 @@ import {Contact} from './contact/common/modal/contact';
 export const CONTACT: Contact[] = [
   {
     id: 1,
-    name: 'Trong Huu',
+    name: 'Trong',
     title: 'Huu le',
     copmpany: 'fpt',
     phone: '01646938528',
@@ -30,7 +30,7 @@ export const CONTACT: Contact[] = [
   },
   {
     id: 2,
-    name: 'Duy Tran Thanh',
+    name: 'Duy',
     title: 'tran thanh',
     phone: '',
     copmpany: 'google',
@@ -62,8 +62,8 @@ export const CONTACT: Contact[] = [
   },
   {
     id: 3,
-    name: 'huu trong',
-    title: 'Trong Huu',
+    name: 'huu',
+    title: 'Duy Tran Thanh',
     phone: '+841616938528',
     copmpany: 'facebook',
     email: 'huulnt@gmail.com',

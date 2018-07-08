@@ -10,7 +10,7 @@
         </button>
       </div>
       <div class="col-sm-4 d-flex justify-content-end">
-        <button  (click)="!showTagPopUp();">
+        <button *ngIf="contacts === contacts"  (click)="!showTagPopUp();">
           TAGS V
         </button>
 

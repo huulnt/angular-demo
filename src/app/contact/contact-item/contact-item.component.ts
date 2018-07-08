@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Contact} from '../common/modal/contact';
 import {ContactTag} from '../common/modal/contactTag';
+import {ContactService} from '../../contact.serivce';
 
 @Component({
   selector: 'app-contact-item',
@@ -14,7 +15,7 @@ export class ContactItemComponent implements OnInit {
   isClick: Boolean = false;
   selectedTag: ContactTag;
 
-  constructor() {
+  constructor(private contact: ContactService) {
   }
 
   ngOnInit() {
@@ -66,5 +67,4 @@ export class ContactItemComponent implements OnInit {
       this.selectedTag = {id: 0, name: ''};
     }
   }
-
 }
